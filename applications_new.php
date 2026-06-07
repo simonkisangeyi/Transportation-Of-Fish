@@ -293,17 +293,17 @@ try {
 
     <div class="layout">
       <section class="card form-card">
-        <h2>📝 Place Your Order</h2>
+        <h2> Place Your Order</h2>
 
         <form id="orderForm" method="post">
           <div class="field">
-            <label>👤 Full Name *
+            <label> Full Name *
               <input type="text" name="fullname" placeholder="Enter your full name" required />
             </label>
           </div>
 
           <div class="field">
-            <label>📞 Phone Number *
+            <label> Phone Number *
               <input type="tel" name="phone" placeholder="0754 123 456" required />
             </label>
           </div>
@@ -319,13 +319,13 @@ try {
           </div>
 
           <div class="field">
-            <label>⚖️ Weight (kg) *
+            <label> Weight (kg) *
               <input type="number" name="weight" min="1" value="10" required />
             </label>
           </div>
 
           <div class="field">
-            <label>📍 Destination *
+            <label> Destination *
               <select name="destination" required>
                 <?php foreach ($destinations as $destination): ?>
                   <option value="<?php echo (int)$destination['destination_id']; ?>"><?php echo htmlspecialchars($destination['name'], ENT_QUOTES, 'UTF-8'); ?></option>
@@ -335,34 +335,34 @@ try {
           </div>
 
           <div class="field">
-            <label>📅 Delivery Date *
+            <label> Delivery Date *
               <input type="date" name="delivery_date" value="2026-06-15" required />
             </label>
           </div>
 
           <div class="field">
-            <label>📝 Special Instructions (Optional)
+            <label> Special Instructions (Optional)
               <textarea name="instructions" placeholder="Enter any delivery instructions..."></textarea>
             </label>
           </div>
 
           <div class="price-box">
-            <strong>💰 Estimated Delivery Cost</strong>
+            <strong> Estimated Delivery Cost</strong>
             <span>TZS 25,000</span>
             <span>*Price includes cold chain transport</span>
           </div>
 
-          <button class="submit-btn" type="submit">🚚 Submit Order Now</button>
+          <button class="submit-btn" type="submit"> Submit Order Now</button>
         </form>
 
         <div class="note-box">
-          <strong>📌 Note:</strong> Orders outside Mwanza region take 24-48 hours. Freshness guaranteed with ice-packed cooling system (0-4°C).
+          <strong> Note:</strong> Orders outside Mwanza region take 24-48 hours. Freshness guaranteed with ice-packed cooling system (0-4°C).
         </div>
       </section>
 
       <aside class="orders">
         <div class="card">
-          <h2>📋 Customer Orders</h2>
+          <h2> Customer Orders</h2>
         </div>
 
         <?php
@@ -373,15 +373,15 @@ try {
           <h3><?php echo htmlspecialchars($o['fullname']); ?></h3>
           <div class="order-row">
             <span>🐟 <?php echo htmlspecialchars($o['fish_type']); ?> | <?php echo (int)$o['weight_kg']; ?> kg</span>
-            <span>📍 <?php echo htmlspecialchars($o['destination']); ?></span>
+            <span> <?php echo htmlspecialchars($o['destination']); ?></span>
           </div>
           <div class="order-row">
-            <span>📅 Deliver by: <?php echo htmlspecialchars($o['delivery_date']); ?></span>
-            <span>💰 TZS —</span>
+            <span> Deliver by: <?php echo htmlspecialchars($o['delivery_date']); ?></span>
+            <span> TZS —</span>
           </div>
           <div class="order-row">
-            <span>📞 <?php echo htmlspecialchars($o['phone']); ?></span>
-            <span class="order-status">⏳ Pending Delivery</span>
+            <span> <?php echo htmlspecialchars($o['phone']); ?></span>
+            <span class="order-status"> Pending Delivery</span>
           </div>
         </article>
         <?php endforeach; ?>
